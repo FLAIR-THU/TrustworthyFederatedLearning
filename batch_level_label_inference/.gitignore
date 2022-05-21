@@ -1,6 +1,8 @@
 # Custom
 .idea
-experiment*
+exp_*
+data/
+dataset/
 images*
 *.pptx
 old*
