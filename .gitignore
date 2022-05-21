@@ -127,3 +127,18 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# dataset documents
+./batch_level_label_inference/dataset/*
+batch_level_label_inference/dataset/
+./batch_level_label_inference/data/*
+batch_level_label_inference/data/
+batch_level_label_inference/vfl_dlg_certify.py
+batch_level_label_inference/vfl_main_task_certify.py
+**/cifar-10-batches-py
+**/cifar-100-python
+**/MNIST
+**/NUS_WIDE
+**/criteo
+**/torch
+**/.idea
