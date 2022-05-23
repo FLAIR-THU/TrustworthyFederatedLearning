@@ -2,7 +2,7 @@
 .idea
 exp_*
 data/
-dataset/
+dataset/*/
 images*
 *.pptx
 old*
