@@ -3,6 +3,7 @@
 for i in `seq 0 10`; do
     # for attack only, without defense
     python main.py --name attack --dataset mnist --model mlp2 --seed $i --epoch 100 --backdoor 1 --defense_up 0 --learning_rate 0.01 --gpu 0
+    python main.py --name attack --dataset cifar10 --model resnet18 --seed $i --epoch 100 --backdoor 1 --defense_up 0 --learning_rate 0.01 --gpu 0
     python main.py --name attack --dataset cifar20 --model resnet18 --seed $i --epoch 100 --backdoor 1 --defense_up 0 --learning_rate 0.01 --gpu 0
     # defense
     python main.py --name defense --dataset cifar20 --model resnet18 --seed $i --epoch 100 --backdoor 1 --defense_up 1 --learning_rate 0.01 --gpu 0 --dp_type laplace --dp_strength 0.001

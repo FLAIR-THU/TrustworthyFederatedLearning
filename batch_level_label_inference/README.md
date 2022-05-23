@@ -1,8 +1,8 @@
-# Label inference attack
+# batch_level_label_inference
 
 ## 0. Quick Start
-* The following contents of this README file shows some of the basic utils of the code in `./VFL_Label_Inference/` folder.
-* A quick start of running all the codes in `./VFL_Label_Inference/` folder is to use `bash ./run.sh` under `./VFL_Label_Inference/` directory in terminal. The results of the experiments will be in folder `./exp_result/`.
+* The following contents of this README file shows some of the basic utils of the code in this folder.
+* A quick start of running all the codes in `./batch_level_label_inference/` folder is to use `bash ./run.sh` under `./batch_level_label_inference/` directory in terminal. The results of the experiments will be in folder `./exp_result/`.
 
 ## 1. Settings:
 
@@ -15,7 +15,7 @@
 
 ## 2. Prepare the training data
 
- Default data directory should be: `./data`
+ Default data directory should be in folder: `./data/` or `./dataset/`
 
 | DATASET  | SOURCE                                                       |
 | -------- | ------------------------------------------------------------ |
@@ -25,16 +25,19 @@
 
 ## 3. CoAE
 
-run `train_autoencoder.py` to train the CoAE
+* run `./train_CoAE/train_autoencoder.py` to train the CAE encoder and decoder.
+* trained CAE models are in folder `./trained_models/`.
+* example models are ready in folder `./trained_models/`. ( `batch_level_label_inference, replacement_backdoor_binary, replacement_backdoor_multi` share the same trained CAE encoder and decoder)
+
 
 ## 4. Defense
 
 ### 4.1 experiments of label inference attack
 
-| filename                    | description                                                  |
-| ----------------------------| ------------------------------------------------------------ |
+| filename | description |
+| :- | :- |
 | vfl_dlg.py                  | the class of label inference attack algorithm                |
-| vfl_dlg_ae.py               | label inference attack under Coae defense                    |
+| vfl_dlg_ae.py               | label inference attack under CAE defense                    |
 | vfl_dlg_gaussian.py         | label inference attack under dp-gaussian defense             |
 | vfl_dlg_grad_spars.py       | label inference attack under gradient sparsification defense |
 | vfl_dlg_laplace.py          | label inference attack under dp-laplace defense              |
@@ -43,10 +46,10 @@ run `train_autoencoder.py` to train the CoAE
 
 ### 4.2 experiments of main attack
 
-| filename              | description                                      |
-| --------------------- | ------------------------------------------------ |
+| filename | description |
+| :- | :- |
 | vfl_main_task.py      | the class of VFL main task                       |
-| vfl_dlg_ae.py         | main task under Coae defense                     |
+| vfl_dlg_ae.py         | main task under CAE defense                     |
 | vfl_dlg_gaussian.py   | main  task under dp-gaussian defense             |
 | vfl_dlg_grad_spars.py | main  task under gradient sparsification defense |
 | vfl_dlg_laplace.py    | main  task under dp-laplace defense              |
