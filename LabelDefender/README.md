@@ -1,6 +1,23 @@
 # Label Defender
 
 > This folder is the pytorch implementation for [Defending Batch-Level Label Inference and Replacement Attacks in Vertical Federated Learning](https://www.computer.org/csdl/journal/bd/5555/01/09833321/1F8uKhxrvNe).
+> For citation, please copy and paste the below into `.bib` file.
+```
+@ARTICLE {9833321,
+author = {T. Zou and Y. Liu and Y. Kang and W. Liu and Y. He and Z. Yi and Q. Yang and Y. Zhang},
+journal = {IEEE Transactions on Big Data},
+title = {Defending Batch-Level Label Inference and Replacement Attacks in Vertical Federated Learning},
+year = {2022},
+volume = {},
+number = {01},
+issn = {2332-7790},
+pages = {1-12},
+doi = {10.1109/TBDATA.2022.3192121},
+publisher = {IEEE Computer Society},
+address = {Los Alamitos, CA, USA},
+month = {jul}
+}
+```
 
 ## 1. Attacks and Defenses
 * In the [paper](https://www.computer.org/csdl/journal/bd/5555/01/09833321/1F8uKhxrvNe), we proposed 2 novel attacks at passive part (party without label information), namely, `Batch-level Label Inference Attack` and `Label Replacement Backdoor Attack`. These two attacks are implemented separately in folder `batch_level_label_inference` and `replacement_backdoor_binary`. In folder `replacement_backdoor_multi`, we extend our backdoor attack experiment from VFL setting with 2 parties into VFL setting with 4 parties. 
