@@ -1,6 +1,6 @@
 # Breaching FedMD: Image Recovery via Paired-Logits Inversion Attack
 
-Code for Breaching FedMD: Image Recovery via Paired-Logits Inversion Attack
+Implementation of **Breaching FedMD: Image Recovery via Paired-Logits Inversion Attack** (CVPR 2023)
 
 <img src="img/overview.drawio.svg">
 
@@ -56,7 +56,7 @@ optional arguments:
                             FedMD, FedGEMS, or FedGEMS
   -d DATASET, --dataset DATASET
                         type of dataset;
-                            LAG or LFW
+                            LAG, LFW, or FaceScrub
   -a ATTACK_TYPE, --attack_type ATTACK_TYPE
                         type of attack;
                             pli or tbi
