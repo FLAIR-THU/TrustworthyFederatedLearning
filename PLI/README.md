@@ -39,11 +39,15 @@ We assume that all data locates in `data` folder.
 
 ## Usage
 
-- example
+- Example
 
 ```
 python script/main.py -t FedMD -d LAG -a pli -p ./data/lag -o path_to_output_folder
 ```
+
+- Basic Optional Arguments
+
+For more details, please check [script/main.py](script/main.py).
 
 ```
 usage: main.py [-h] [-t FEDKD_TYPE] [-d DATASET] [-a ATTACK_TYPE] [-c CLIENT_NUM] [-s SOFTMAX_TEMPREATURE]
