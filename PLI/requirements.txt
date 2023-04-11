@@ -1,0 +1,7 @@
+opencv_python
+matplotlib
+numpy>=1.20.1
+scikit_image>=0.18.3
+torch==1.12.1
+torchvision
+pretrainedmodels
